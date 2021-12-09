@@ -1,40 +1,66 @@
-body
-{
-background: url("triangular.png");
-font-family: 'Josefin Sans', sans-serif;
+body{
+    background: url("triangular.png");
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-#container
-{
+#container{
     height: auto;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #ffff;
+    
 }
 
-#header
-{
+.header{
+    height: 90px;
+    width: 1000px;
+    margin: 10px;
+    margin-bottom: 5px;
+}
+
+#logo1{
+    height: 90px;
+    width: 145px;
+    font-size: 90px;
     text-align: left;
-    font-size: 80px;
+    float: left;
 }
 
-#main
-{
-    float:left;
+#logo2{
+    height: 90px;
+    width: 85px;
+    text-align: right;
+    font-size: 90px;
+    color: #ee5232;
+    float: left;
+}
+
+#logo3{
+    height: 48px;
+    width: 730px;
+    font-size: 33px;
+    padding-top: 42px;
+    margin-left: 20px;
+    text-align: left;
+    float: left;
+}
+
+#main{
+    float: left;
     text-align: justify;
     margin: 10px;
+    margin-top: 5px;
     width: 690px;
     height: 383px;
     font-size: 20px;
     background-color: #666666;
     padding: 20px;
-    line-height:150%;
+    line-height: 150%;
 }
 
-#tile1
-{
+#about-us{
     float: left;
     margin: 10px;
     width: 230px;
@@ -42,16 +68,14 @@ font-family: 'Josefin Sans', sans-serif;
     background-color: #93c748;
     text-align: center;
     font-size: 30px;
-    line-height:150%;
+    line-height: 150%;
 }
 
-#tile1:hover
-{
-background-color:#82b637;
+#about-us:hover{
+    background-color: #82b637;
 }
 
-#tile2
-{
+#projects{
     float: left;
     margin: 10px;
     width: 230px;
@@ -59,16 +83,14 @@ background-color:#82b637;
     background-color: #ee5232;
     text-align: center;
     font-size: 30px;
-    line-height:150%;
+    line-height: 150%;
 }
 
-#tile2:hover
-{
-background-color: #dd4121
+#projects:hover{
+    background-color: #dd4121
 }
 
-#tile3
-{
+#contact{
     float: left;
     margin: 10px;
     width: 230px;
@@ -76,23 +98,20 @@ background-color: #dd4121
     background-color: #3095d3;
     text-align: center;
     font-size: 30px;
-    line-height:150%;
+    line-height: 150%;
 }
 
-#tile3:hover
-{
-background-color: #2084c2;
+#contact:hover{
+    background-color: #2084c2;
 }
 
-a.tilelink
-{
-color:#ffff;
-text-decoration: none;
+a.tilelink{
+    color: #ffff;
+    text-decoration: none;
 }
 
-#picture
-{
+#picture{
     float: left;
-    margin: 10px;
-    
+    margin: 10px;;
+    margin-top: 5px;
 }
