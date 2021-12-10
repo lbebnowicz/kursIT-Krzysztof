@@ -1,0 +1,102 @@
+body {
+    background: url("triangular.png");
+    font-family: 'Josefin Sans', sans-serif;
+}
+#container {
+    height: auto;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: #ffff;
+}
+.header {
+    height: 90px;
+    width: 1000px;
+    margin: 10px;
+    margin-bottom: 5px;
+}
+#logo1 {
+    height: 90px;
+    width: 145px;
+    font-size: 90px;
+    text-align: left;
+    float: left;
+}
+#logo2 {
+    height: 90px;
+    width: 85px;
+    text-align: right;
+    font-size: 90px;
+    color: #ee5232;
+    float: left;
+}
+#logo3 {
+    height: 48px;
+    width: 730px;
+    font-size: 33px;
+    padding-top: 42px;
+    margin-left: 20px;
+    text-align: left;
+    float: left;
+}
+#main {
+    float: left;
+    text-align: justify;
+    margin: 10px;
+    margin-top: 5px;
+    width: 690px;
+    height: 383px;
+    font-size: 20px;
+    background-color: #666666;
+    padding: 20px;
+    line-height: 150%;
+}
+#about-us {
+    float: left;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+    background-color: #93c748;
+    text-align: center;
+    font-size: 30px;
+    line-height: 150%;
+}
+#about-us:hover {
+    background-color: #82b637;
+}
+#projects {
+    float: left;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+    background-color: #ee5232;
+    text-align: center;
+    font-size: 30px;
+    line-height: 150%;
+}
+#projects:hover {
+    background-color: #dd4121
+}
+#contact {
+    float: left;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+    background-color: #3095d3;
+    text-align: center;
+    font-size: 30px;
+    line-height: 150%;
+}
+#contact:hover {
+    background-color: #2084c2;
+}
+a.tilelink {
+    color: #ffff;
+    text-decoration: none;
+}
+#picture {
+    float: left;
+    margin: 10px;;
+    margin-top: 5px;
+}
