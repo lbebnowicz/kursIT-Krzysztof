@@ -9,6 +9,7 @@
     <meta name="description" content="How to make yourself an internet technology specialist" />
     <meta name="keywords" content="IT, internet technology, html, css, frontend developer, how to start programming" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="css/fontello.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,32 +20,110 @@
 <body>
     <div id="container">
         <div class="header">
-            <div id="logo1">DO</div>
-            <div id="logo2">IT</div>
-            <div id="logo3">Make yourself an<span style="color: #ee5232"> Internet Technology </span>specialist!</div>
+            <div id="logo1">DO<span id="spanlogo1" style="color:#ee5232">IT</span></div>
+            <div id="logo2">Make yourself an<span style="color: #ee5232"> Internet Technology </span>specialist!</div>
         </div>
         <div style="clear:both"></div>
         <div id="picture">
-            <img src="chameleon.png" alt="chameleon">
+            <img src="chameleon.jpg" alt="chameleon">
         </div>
-        <div id="main">Hi!<br />It's nice that you visited us :) We are a group of people who have families, work, lots
-            of problems, and don't have time obviously, but most of all we have nothing to lose! And that is why, in
-            spite of all adversities, we desperately want to acquire the secret knowledge of programming. So maybe we
-            are a little bit like chameleons - because we try to completely change ;) If you would like to join our
-            team, please feel free to contact us! And if you find some time more, see what projects we have managed to
-            implement so far.<br />See You! :)
-        </div>
-        <a href="aboutUs.html" target="_blank" class="tilelink">
-            <div id="about-us"><i class="icon-user"></i><br />About us</div>
-        </a>
-        <a href="projects.html" target="_blank" class="tilelink">
-            <div id="projects"><i class="icon-laptop"></i><br />Our projects</div>
-        </a>
-        <a href="contact.html" target="_blank" class="tilelink">
-            <div id="contact"><i class="icon-mail"></i><br />Contact</div>
+        <div id="main"></div>
+        <div id="about-us"><i class="icon-user"></i><br />About us</div>
+        <div id="projects"><i class="icon-laptop"></i><br />Our projects</div>
+        <a href="mailto: address@address.com" title="write to us" class="tilelink">
+            <div id="contact" type="button"><i class="icon-mail"></i><br />Contact</div>
         </a>
         <div style="clear:both"></div>
     </div>
+
+    <footer>DO<span style="color: #ee5232">IT</span>&copy; 2022<span style="color: #82b637"> Made by </span><img
+            src="favicon.ico" alt="small chameleon"><span> Thank you for visit! Come to us again! :)</span></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        const main = "Hi!<br />Its nice that you visited us :) We are a group of people who have families, work, lots of problems, and don't have time obviously, but most of all we have nothing to lose! And that is why, in spite of all adversities, we desperately want to acquire the secret knowledge of programming. So maybe we are a little bit like chameleons - because we try to completely change ;) If you would like to join our team, please feel free to contact us! And if you find some time more, see what projects we have managed to implement so far.<br />See You! :)";
+        const tempMain = "Our team will be here. One day :)";
+        const tempMain2 = "All our projects will be here. One day :)<br /><br />" + '<a href="https://github.com" target="_blank" class="linkToProjects" title="See Zosia\'s project!"><img src="github.jpg"></a>' + '<a href="https://github.com" target="_blank" class="linkToProjects" title="See Justyna\'s project!"><img src="github.jpg"></a>' + '<a href="https://github.com" target="_blank" class="linkToProjects" title="See Ania\'s project!"><img src="github.jpg"></a>' + "<br /><br />" + '<a href="ourProjects.html" target="_blank" class="doYou" title="See our other works!">Do you want to see more?</a>';
+
+        var picture1 = '<img src="chameleon.jpg" alt="chameleon">';
+        var picture2 = '<img src="chameleon4.jpg" alt="chameleon">';
+        var picture3 = '<img src="chameleon5.jpg" alt="chameleon">';
+
+        window.onload = function displayOnLoad() {
+            document.getElementById('main').innerHTML = main;
+            document.getElementById('logo1').style.cursor = "default";
+            document.getElementById('logo2').style.cursor = "default";
+            document.getElementById('main').style.cursor = "default";
+            doIt.removeEventListener("click", displayMain);
+        }
+
+        var aboutUs = document.getElementById('about-us');
+        aboutUs.addEventListener("click", displayAboutUs);
+
+        function displayAboutUs() {
+            document.getElementById('main').innerHTML = tempMain;
+            hidePicture();
+            setTimeout("setPicture3()", 300);
+            document.getElementById('about-us').style.cursor = "default";
+            document.getElementById('projects').style.cursor = "pointer";
+            document.getElementById('logo1').style.cursor = "pointer";
+            ourProjects.addEventListener("click", displayOurProjects);
+            aboutUs.removeEventListener("click", displayAboutUs);
+            doIt.addEventListener("click", displayMain);
+        }
+
+        var ourProjects = document.getElementById('projects');
+        ourProjects.addEventListener("click", displayOurProjects);
+
+        function displayOurProjects() {
+            document.getElementById('main').innerHTML = tempMain2;
+            hidePicture();
+            setTimeout("setPicture2()", 300);
+            document.getElementById('projects').style.cursor = "default";
+            document.getElementById('about-us').style.cursor = "pointer";
+            document.getElementById('logo1').style.cursor = "pointer";
+            aboutUs.addEventListener("click", displayAboutUs);
+            ourProjects.removeEventListener("click", displayOurProjects);
+            doIt.addEventListener("click", displayMain);
+        }
+
+        var doIt = document.getElementById('logo1');
+        doIt.addEventListener("click", displayMain);
+
+        function displayMain() {
+            document.getElementById('main').innerHTML = main;
+            hidePicture();
+            setTimeout("setPicture1()", 300);
+            document.getElementById('about-us').style.cursor = "pointer";
+            document.getElementById('projects').style.cursor = "pointer";
+            document.getElementById('logo1').style.cursor = "default";
+            aboutUs.addEventListener("click", displayAboutUs);
+            ourProjects.addEventListener("click", displayOurProjects);
+            doIt.removeEventListener("click", displayMain);
+        }
+
+        function hidePicture() {
+            $("#picture").fadeOut(300);
+        }
+
+        function setPicture1() {
+            document.getElementById("picture").innerHTML = picture1;
+            $("#picture").fadeIn(300);
+        }
+
+        function setPicture2() {
+            document.getElementById("picture").innerHTML = picture2;
+            $("#picture").fadeIn(300);
+        }
+
+        function setPicture3() {
+            document.getElementById("picture").innerHTML = picture3;
+            $("#picture").fadeIn(300);
+        }
+    </script>
+
 </body>
 
 </html>
