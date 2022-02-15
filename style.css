@@ -1,5 +1,5 @@
 body {
-    background: url("triangular.png");
+    background-color: #303030;
     font-family: 'Josefin Sans', sans-serif;
 }
 #container {
@@ -11,34 +11,29 @@ body {
     color: #ffff;
 }
 .header {
-    height: 90px;
-    width: 1000px;
+    height: 80px;
+    width: 980px;
     margin: 10px;
     margin-bottom: 5px;
 }
 #logo1 {
-    height: 90px;
-    width: 145px;
+    height: 80px;
+    width: 230px;
     font-size: 90px;
-    text-align: left;
+    text-align: justify;
     float: left;
+    color: white;
+    margin-right: 10px;
 }
 #logo2 {
-    height: 90px;
-    width: 85px;
-    text-align: right;
-    font-size: 90px;
-    color: #ee5232;
-    float: left;
-}
-#logo3 {
-    height: 48px;
-    width: 730px;
+    height: 38px;
+    width: 722px;
     font-size: 33px;
     padding-top: 42px;
-    margin-left: 20px;
-    text-align: left;
+    margin-left: 10px;
+    text-align: justify;
     float: left;
+    padding-left: 8px;
 }
 #main {
     float: left;
@@ -61,6 +56,7 @@ body {
     text-align: center;
     font-size: 30px;
     line-height: 150%;
+    cursor: pointer;
 }
 #about-us:hover {
     background-color: #82b637;
@@ -74,6 +70,7 @@ body {
     text-align: center;
     font-size: 30px;
     line-height: 150%;
+    cursor: pointer;
 }
 #projects:hover {
     background-color: #dd4121
@@ -97,6 +94,36 @@ a.tilelink {
 }
 #picture {
     float: left;
-    margin: 10px;;
+    margin: 10px;
     margin-top: 5px;
+    height: 673px;
+    width: 230px;
+}
+.linkToProjects {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.linkToProjects:hover {
+    opacity: 75%;
+}
+.doYou {
+    color: #ffff;
+    font-size: 30px;
+    display: flex;
+	justify-content: right;
+	text-decoration: none;
+}
+.doYou:hover {
+    color: #ee5232;
+    /* color: #000000; */
+}
+footer {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    color:#ffff;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    font-size: 15px;
 }
